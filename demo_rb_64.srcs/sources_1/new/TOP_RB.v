@@ -21,6 +21,16 @@
 
 
 module TOP_RB(
+	input		wire 	sys_clk_p,
+	input		wire 	sys_clk_n,
+	
+	input		wire	rst_n,
+	
+	input		wire	gtx_clk_p,
+	input		wire	gtx_clk_n,
+	
 
     );
+
+	
 endmodule
