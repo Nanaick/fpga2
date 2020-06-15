@@ -38,7 +38,7 @@ module TOP_RB(
 	output 		wire [1:0] sfp_dis
     );
 
- 
+
  wire 	   sys_clk_100m;
  wire 	   drp_clk_100m;
  
@@ -55,7 +55,7 @@ module TOP_RB(
  reg       Rx_flage;
  reg 	   tx_flag;
 
- reg   		   Rx_flage_reg;
+ reg   	   Rx_flage_reg;
 
  wire 	   sys_clk_i;
 
@@ -78,18 +78,17 @@ module TOP_RB(
  reg    [63:0] Rx_data_temp;
  reg    [63:0] rx_parity;
 
-
  reg [31:0] idataInCtrl[3:0];
  reg [31:0] fdataInCtrl[3:0];
 
  reg [63:0] DATA_OUT[31:0];
  reg [63:0] DATA_IN [31:0];
- 
 
  assign  sys_clk_100m = sys_clk_i;
  assign  drp_clk_100m = sys_clk_i;
  
  assign  sys_rst = ~reset;
+
  assign  sfp_dis = 2'b00; 
  
  reg	[63: 0]	s_axi_tx_tdata ;
@@ -98,10 +97,11 @@ module TOP_RB(
  reg			s_axi_tx_tvalid;
  wire			s_axi_tx_tready;
  
- (* mark_debug = "1" *)wire   [63: 0] m_axi_rx_tdata ;
- (* mark_debug = "1" *)wire   [ 7: 0] m_axi_rx_tkeep ;
- (* mark_debug = "1" *)wire    		  m_axi_rx_tlast ;
- (* mark_debug = "1" *)wire    		  m_axi_rx_tvalid;
+
+wire   [63: 0] m_axi_rx_tdata ;
+wire   [ 7: 0] m_axi_rx_tkeep ;
+wire    	   m_axi_rx_tlast ;
+wire    	   m_axi_rx_tvalid;
 
 
  IBUFDS #(
@@ -115,8 +115,8 @@ module TOP_RB(
 );
 
 
-//数据接收端
 
+//数据接收端
 always @(posedge user_clk_out or posedge sys_reset_out) begin
 	if (sys_reset_out) begin
 		Rx_data_temp  <= 64'd0;
@@ -221,8 +221,8 @@ end
 	end
 end
 
-
-aurora_64b66b_0 aurora_64b66b_sd (
+/*
+aurora_64b66b_0 aurora_64b66b_rb (
   .rxp(RXP),                                          // input wire [0 : 0] rxp
   .rxn(RXN),                                          // input wire [0 : 0] rxn
   .reset_pb(sys_rst),                                // input wire reset_pb
@@ -274,6 +274,53 @@ aurora_64b66b_0 aurora_64b66b_sd (
   .sys_reset_out (sys_reset_out),                     // output wire sys_reset_out 低系统有效
   .gt_reset_out  (  ),                      // output wire gt_reset_out
   .gt_refclk1_out(   )                     // output wire gt_refclk1_out
+);
+*/
+aurora_64b66b_0 aurora_64b66b_rb (
+  .rxp(RXP),                                          // input wire [0 : 0] rxp
+  .rxn(RXN),                                          // input wire [0 : 0] rxn
+  .reset_pb(sys_rst),                                // input wire reset_pb
+  .power_down(1'b0),                            // input wire power_down
+  .pma_init(1'b0),                                // input wire pma_init
+  .loopback(3'd0),                                // input wire [2 : 0] loopback
+  .txp(TXP),                                          // output wire [0 : 0] txp
+  .txn(TXN),                                          // output wire [0 : 0] txn
+  .hard_err( ),                                // output wire hard_err
+  .soft_err( ),                                // output wire soft_err
+  .channel_up(channel_up),                            // output wire channel_up
+  .lane_up(lane_up),                                  // output wire [0 : 0] lane_up
+  .tx_out_clk( ),                            // output wire tx_out_clk
+  .drp_clk_in(drp_clk_100m),                            // input wire drp_clk_in
+  .gt_pll_lock( ),                          // output wire gt_pll_lock
+  .s_axi_tx_tdata(s_axi_tx_tdata),                    // input wire [63 : 0] s_axi_tx_tdata
+  .s_axi_tx_tkeep(s_axi_tx_tkeep),                    // input wire [7 : 0] s_axi_tx_tkeep
+  .s_axi_tx_tlast(s_axi_tx_tlast),                    // input wire s_axi_tx_tlast
+  .s_axi_tx_tvalid(s_axi_tx_tvalid),                  // input wire s_axi_tx_tvalid
+  .s_axi_tx_tready(s_axi_tx_tready),                  // output wire s_axi_tx_tready
+ 
+  .m_axi_rx_tdata(m_axi_rx_tdata),                    // output wire [63 : 0] m_axi_rx_tdata
+  .m_axi_rx_tkeep(m_axi_rx_tkeep),                    // output wire [7 : 0] m_axi_rx_tkeep
+  .m_axi_rx_tlast(m_axi_rx_tlast),                    // output wire m_axi_rx_tlast
+  .m_axi_rx_tvalid(m_axi_rx_tvalid),                  // output wire m_axi_rx_tvalid
+  .mmcm_not_locked_out( ),          // output wire mmcm_not_locked_out
+  .drpaddr_in(9'd0),                            // input wire [8 : 0] drpaddr_in
+  .drpdi_in(16'd0),                                // input wire [15 : 0] drpdi_in
+  .drprdy_out( ),                            // output wire drprdy_out
+  .drpen_in(1'b0),                                // input wire drpen_in
+  .drpwe_in(1'b0),                                // input wire drpwe_in
+  .drpdo_out( ),                              // output wire [15 : 0] drpdo_out
+  .init_clk(sys_clk_100m),                                // input wire init_clk
+  .link_reset_out( ),                    // output wire link_reset_out
+  .gt_refclk1_p(GTXQ_P),                        // input wire gt_refclk1_p
+  .gt_refclk1_n(GTXQ_N),                        // input wire gt_refclk1_n
+  .user_clk_out(user_clk_out),                        // output wire user_clk_out
+  .sync_clk_out( ),                        // output wire sync_clk_out
+  .gt_qpllclk_quad2_out( ),        // output wire gt_qpllclk_quad2_out
+  .gt_qpllrefclk_quad2_out( ),  // output wire gt_qpllrefclk_quad2_out
+  .gt_rxcdrovrden_in(1'b0),              // input wire gt_rxcdrovrden_in
+  .sys_reset_out( sys_reset_out ),                      // output wire sys_reset_out
+  .gt_reset_out( ),                        // output wire gt_reset_out
+  .gt_refclk1_out( )                    // output wire gt_refclk1_out
 );
 
 
