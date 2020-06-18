@@ -9,20 +9,21 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="8413fs"></ZoomEndTime>
-      <Cursor1Time time="511000fs"></Cursor1Time>
+      <ZoomStartTime time="495700fs"></ZoomStartTime>
+      <ZoomEndTime time="517661fs"></ZoomEndTime>
+      <Cursor1Time time="513000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="356"></NameColumnWidth>
-      <ValueColumnWidth column_width="188"></ValueColumnWidth>
+      <ValueColumnWidth column_width="173"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
-   <wvobject fp_name="channel_up" type="logic">
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="channel_up_1" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">channel_up</obj_property>
-      <obj_property name="ObjectShortName">channel_up</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">channel_up_1</obj_property>
+      <obj_property name="ObjectShortName">channel_up_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -30,7 +31,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">lane_up</obj_property>
       <obj_property name="ObjectShortName">lane_up</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -54,7 +54,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">m_axi_rx_tlast</obj_property>
       <obj_property name="ObjectShortName">m_axi_rx_tlast</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -62,7 +61,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">m_axi_rx_tvalid</obj_property>
       <obj_property name="ObjectShortName">m_axi_rx_tvalid</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

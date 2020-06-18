@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jun 18 10:12:50 2020
+| Date         : Thu Jun 18 11:01:26 2020
 | Host         : DESKTOP-J26TQC9 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file TOP_RB_clock_utilization_routed.rpt
 | Design       : TOP_RB
@@ -52,9 +52,9 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                                                                       | Driver Pin                                                                               | Net                                                                                         |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |       12203 |               0 |       12.800 | user_clk_i                                                                                                                                  | aurora_64b66b_rb/inst/clock_module_i/user_clk_net_i/O                                    | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |       14108 |               0 |       12.800 | user_clk_i                                                                                                                                  | aurora_64b66b_rb/inst/clock_module_i/user_clk_net_i/O                                    | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
 | g1        | src1      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1  | n/a          |                 2 |         611 |               0 |        6.400 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gtx_inst/gtxe2_i/RXOUTCLK | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_bufg_i/O | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_to_fabric_i |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 2 |         469 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                  | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                     | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 2 |         473 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                  | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O                     | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |         284 |               0 |              |                                                                                                                                             | sys_clk_100m_BUFG_inst/O                                                                 | sys_clk_100m_BUFG                                                                           |
 | g4        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |          34 |               0 |        6.400 | sync_clk_i                                                                                                                                  | aurora_64b66b_rb/inst/clock_module_i/sync_clock_net_i/O                                  | aurora_64b66b_rb/inst/clock_module_i/sync_clk_i_0                                           |
 | g5        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 1 |           1 |               0 |        6.400 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gtx_inst/gtxe2_i/TXOUTCLK | aurora_64b66b_rb/inst/clock_module_i/txout_clock_net_i/O                                 | aurora_64b66b_rb/inst/clock_module_i/clk_in_i                                               |
@@ -89,13 +89,13 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 4372 |  5100 | 2696 |  1950 |    0 |   100 |   20 |    50 |    0 |   140 |
+| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 4080 |  5100 | 2524 |  1950 |    0 |   100 |   20 |    50 |    0 |   140 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y1              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    1 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 6755 |  5100 | 3081 |  1950 |    0 |   100 |    7 |    50 |    0 |   140 |
+| X1Y1              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    1 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 8681 |  5100 | 4010 |  1950 |    0 |   100 |    9 |    50 |    0 |   140 |
 | X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y2              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |  581 |  5100 |  246 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
+| X1Y2              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |  655 |  5100 |  282 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y3              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |   18 |  4950 |    0 |  1900 |    0 |    90 |    0 |    45 |    0 |   140 |
+| X1Y3              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |   24 |  4950 |    9 |  1900 |    0 |    90 |    0 |    45 |    0 |   140 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
 | X1Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5500 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   140 |
 | X0Y5              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  3300 |    0 |  1450 |    0 |    80 |    0 |    40 |    0 |   120 |
@@ -129,7 +129,7 @@ All Modules
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                               |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
-| g0        | BUFG/O          | n/a               | user_clk_i |      12.800 | {0.000 6.400} |       11604 |        0 |              0 |        1 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
+| g0        | BUFG/O          | n/a               | user_clk_i |      12.800 | {0.000 6.400} |       13426 |        0 |              0 |        1 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -143,10 +143,10 @@ All Modules
 | Y6 |  0 |     0 |
 | Y5 |  0 |     0 |
 | Y4 |  0 |     0 |
-| Y3 |  0 |    18 |
-| Y2 |  0 |    97 |
-| Y1 |  0 |  6369 |
-| Y0 |  0 |  5121 |
+| Y3 |  0 |    24 |
+| Y2 |  0 |   102 |
+| Y1 |  0 |  8463 |
+| Y0 |  0 |  4838 |
 +----+----+-------+
 
 
@@ -171,8 +171,8 @@ All Modules
 | Y5 |  0 |    0 |
 | Y4 |  0 |    0 |
 | Y3 |  0 |    0 |
-| Y2 |  0 |   37 |
-| Y1 |  0 |  573 |
+| Y2 |  0 |   62 |
+| Y1 |  0 |  548 |
 | Y0 |  0 |    0 |
 +----+----+------+
 
@@ -183,7 +183,7 @@ All Modules
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
-| g2        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         466 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
+| g2        | BUFG/O          | n/a               | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} |         470 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
 +-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+-------------+----------+----------------+----------+----------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -198,8 +198,8 @@ All Modules
 | Y5 |  0 |    0 |
 | Y4 |  0 |    0 |
 | Y3 |  0 |    0 |
-| Y2 |  0 |  159 |
-| Y1 |  0 |  307 |
+| Y2 |  0 |  186 |
+| Y1 |  0 |  284 |
 | Y0 |  0 |    0 |
 +----+----+------+
 
@@ -225,8 +225,8 @@ All Modules
 | Y5 |  0 |    0 |
 | Y4 |  0 |    0 |
 | Y3 |  0 |    0 |
-| Y2 |  0 |  256 |
-| Y1 |  0 |   26 |
+| Y2 |  0 |  274 |
+| Y1 |  0 |    8 |
 | Y0 |  0 |    0 |
 +----+----+------+
 
@@ -291,7 +291,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        5121 |               0 | 4372 |    728 |   20 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
+| g0        | n/a   | BUFG/O          | None       |        4838 |               0 | 4080 |    738 |   20 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -304,10 +304,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        6369 |               0 | 5931 |    430 |    7 |   0 |  1 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
-| g1        | n/a   | BUFGCTRL/O      | None       |         573 |               0 |  494 |     77 |    1 |   0 |  1 |    0 |   0 |       0 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_to_fabric_i |
-| g2        | n/a   | BUFG/O          | None       |         307 |               0 |  307 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
-| g3        | n/a   | BUFG/O          | None       |          26 |               0 |   23 |      1 |    0 |   0 |  1 |    0 |   0 |       0 | sys_clk_100m_BUFG                                                                           |
+| g0        | n/a   | BUFG/O          | None       |        8463 |               0 | 7922 |    529 |    9 |   0 |  1 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
+| g1        | n/a   | BUFGCTRL/O      | None       |         548 |               0 |  469 |     77 |    1 |   0 |  1 |    0 |   0 |       0 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_to_fabric_i |
+| g2        | n/a   | BUFG/O          | None       |         284 |               0 |  284 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
+| g3        | n/a   | BUFG/O          | None       |           8 |               0 |    6 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | sys_clk_100m_BUFG                                                                           |
 | g4        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/sync_clk_i_0                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -334,10 +334,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          97 |               0 |  97 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
-| g1        | n/a   | BUFGCTRL/O      | None       |          37 |               0 |  37 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_to_fabric_i |
-| g2        | n/a   | BUFG/O          | None       |         159 |               0 | 159 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
-| g3        | n/a   | BUFG/O          | None       |         256 |               0 | 255 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | sys_clk_100m_BUFG                                                                           |
+| g0        | n/a   | BUFG/O          | None       |         102 |               0 | 102 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0                                           |
+| g1        | n/a   | BUFGCTRL/O      | None       |          62 |               0 |  62 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/rxrecclk_to_fabric_i |
+| g2        | n/a   | BUFG/O          | None       |         186 |               0 | 186 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                                      |
+| g3        | n/a   | BUFG/O          | None       |         274 |               0 | 272 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | sys_clk_100m_BUFG                                                                           |
 | g4        | n/a   | BUFG/O          | None       |          33 |               0 |  33 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/sync_clk_i_0                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -351,7 +351,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          18 |               0 | 18 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
+| g0        | n/a   | BUFG/O          | None       |          24 |               0 | 24 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | aurora_64b66b_rb/inst/clock_module_i/user_clk_i_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)

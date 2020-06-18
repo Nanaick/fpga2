@@ -189,7 +189,7 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 					rd_state 			<= 8'h05;
 					Rx_flage 			<= 1'b1;
 				end else begin
-					rd_state 			<= 8'h01;
+					rd_state 			<= 8'h1;
 				end
 				rx_parity			<= 64'd0;
 			end
@@ -344,12 +344,14 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 			end
 			PAR_SD : begin
 					s_axi_tx_tdata 	<= parity;
+				//	Tx_Cnt			<= 16'd0;
 					s_axi_tx_tlast  <= 1'b1;
 					sd_state	    <= WAIT_SD;
 			end
 			WAIT_SD: begin
 				s_axi_tx_tlast  <= 1'b0;
 				s_axi_tx_tdata	<= 64'd0;
+				Tx_Cnt          <= 16'd0;
 			//	s_axi_tx_tkeep  <= 8'h0;
 				if(wait_cnt > DELAY_SEC) begin
 					sd_state	    <= IDEL;
@@ -425,34 +427,46 @@ ila_0 ila_RX (
 	.probe5(m_axi_rx_tvalid) // input wire [0:0]  probe5
 );
 
+ila_0 ila_tX (
+	.clk(user_clk_out), // input wire clk
+
+	.probe0(channel_up), // input wire [0:0]  probe0  
+	.probe1(s_axi_tx_tready), // input wire [0:0]  probe1 
+	.probe2(s_axi_tx_tdata), // input wire [63:0]  probe2 
+	.probe3(s_axi_tx_tkeep), // input wire [7:0]  probe3 
+	.probe4(s_axi_tx_tlast), // input wire [0:0]  probe4 
+	.probe5(s_axi_tx_tvalid) // input wire [0:0]  probe5
+);
+
+
 ila_1 ila_1_rx (
 	.clk(user_clk_out), // input wire clk
 
-	.probe0(Tx_Cnt), // input wire [15:0]  probe0  
-	.probe1(send_len), // input wire [15:0]  probe1 
+	.probe0(Rx_Cnt), // input wire [15:0]  probe0  
+	.probe1(read_len), // input wire [15:0]  probe1 
 	.probe2(idataInCtrl[0]), // input wire [31:0]  probe2 
-	.probe3(idataInCtrl[3]), // input wire [31:0]  probe3 
-	.probe4(DATA_OUT[1]), // input wire [63:0]  probe4 
-	.probe5(DATA_OUT[2]), // input wire [63:0]  probe5 
+	.probe3(idataInCtrl[2]), // input wire [31:0]  probe3 
+	.probe4(DATA_IN[1]), // input wire [63:0]  probe4 
+	.probe5(DATA_IN[2]), // input wire [63:0]  probe5 
 	.probe6(Rx_flage), // input wire [0:0]  probe6 
 	.probe7(rx_parity), // input wire [63:0]  probe7
-	.probe8(m_axi_rx_tdata), // input wire [63:0]  probe8 
+	.probe8(DATA_IN[4]), // input wire [63:0]  probe8 
 	.probe9(Rx_data_temp) // input wire [63:0]  probe9
 );
 
 ila_1 ila_1_tx (
 	.clk(user_clk_out), // input wire clk
 
-	.probe0(Rx_Cnt), // input wire [15:0]  probe0  
-	.probe1(read_len), // input wire [15:0]  probe1 
+	.probe0(Tx_Cnt), // input wire [15:0]  probe0  
+	.probe1(send_len), // input wire [15:0]  probe1 
 	.probe2(idataOutCtrl[0]), // input wire [31:0]  probe2 
-	.probe3(idataOutCtrl[3]), // input wire [31:0]  probe3 
-	.probe4(DATA_IN[1]), // input wire [63:0]  probe4 
-	.probe5(DATA_IN[3]), // input wire [63:0]  probe5 
+	.probe3(idataOutCtrl[2]), // input wire [31:0]  probe3 
+	.probe4(DATA_OUT[1]), // input wire [63:0]  probe4 
+	.probe5(DATA_OUT[2]), // input wire [63:0]  probe5 
 	.probe6(ap_start_r2), // input wire [0:0]  probe6 
 	.probe7(parity), // input wire [63:0]  probe7
 	.probe8(s_axi_tx_tdata), // input wire [63:0]  probe8 
-	.probe9(DATA_OUT[2]) // input wire [63:0]  probe9
+	.probe9(DATA_OUT[4]) // input wire [63:0]  probe9
 );
 
 endmodule
