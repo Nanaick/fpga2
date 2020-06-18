@@ -1,0 +1,127 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jun 17 10:05:04 2020
+# Process ID: 12024
+# Current directory: G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16120 G:\QH_WORK\Demo\vivado_prj\demo_rb_64\demo_rb_64\demo_rb_64.xpr
+# Log file: G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/vivado.log
+# Journal file: G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+check_syntax
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+program_hw_devices [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {ap_start_r2} {DATA_IN[0]__0} {DATA_IN[1]__0} {DATA_OUT[2]__0} {idataOutCtrl[0]} {idataOutCtrl[3]} {parity} {read_len} {Rx_Cnt} {s_axi_tx_tdata} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+current_hw_device [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+program_hw_devices [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+current_hw_device [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+program_hw_devices [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+current_hw_device [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_tx"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_RX"}]]
+set_property PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property FULL_PROBES.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.ltx} [get_hw_devices xc7z100_1]
+set_property PROGRAM.FILE {G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.runs/impl_1/TOP_RB.bit} [get_hw_devices xc7z100_1]
+program_hw_devices [get_hw_devices xc7z100_1]
+refresh_hw_device [lindex [get_hw_devices xc7z100_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z100_1] -filter {CELL_NAME=~"ila_1_rx"}]]
+close_hw
