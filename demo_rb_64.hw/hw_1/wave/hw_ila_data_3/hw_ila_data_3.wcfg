@@ -9,58 +9,58 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="495700fs"></ZoomStartTime>
-      <ZoomEndTime time="517661fs"></ZoomEndTime>
-      <Cursor1Time time="513000fs"></Cursor1Time>
+      <ZoomStartTime time="319150fs"></ZoomStartTime>
+      <ZoomEndTime time="375551fs"></ZoomEndTime>
+      <Cursor1Time time="343000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="356"></NameColumnWidth>
-      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+      <ValueColumnWidth column_width="143"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="channel_up_1" type="logic">
+   <wvobject fp_name="channel_up" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">channel_up_1</obj_property>
-      <obj_property name="ObjectShortName">channel_up_1</obj_property>
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="lane_up" type="logic">
+   <wvobject fp_name="s_axi_tx_tdata" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">lane_up</obj_property>
-      <obj_property name="ObjectShortName">lane_up</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="m_axi_rx_tdata" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m_axi_rx_tdata[63:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axi_rx_tdata[63:0]</obj_property>
+      <obj_property name="ElementShortName">s_axi_tx_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_tx_tdata[63:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="m_axi_rx_tkeep" type="array">
+   <wvobject fp_name="s_axi_tx_tkeep" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m_axi_rx_tkeep[7:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axi_rx_tkeep[7:0]</obj_property>
+      <obj_property name="ElementShortName">s_axi_tx_tkeep[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_tx_tkeep[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="m_axi_rx_tlast" type="logic">
+   <wvobject fp_name="s_axi_tx_tlast" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m_axi_rx_tlast</obj_property>
-      <obj_property name="ObjectShortName">m_axi_rx_tlast</obj_property>
+      <obj_property name="ElementShortName">s_axi_tx_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axi_tx_tlast</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="m_axi_rx_tvalid" type="logic">
+   <wvobject fp_name="s_axi_tx_tready" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">m_axi_rx_tvalid</obj_property>
-      <obj_property name="ObjectShortName">m_axi_rx_tvalid</obj_property>
+      <obj_property name="ElementShortName">s_axi_tx_tready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_tx_tready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="s_axi_tx_tvalid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">s_axi_tx_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_tx_tvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

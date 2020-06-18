@@ -55,6 +55,7 @@ module TOP_RB(
 
  reg       Rx_flage;
  reg 	   tx_flag;
+ reg 		tx_flag_reg;
 
  reg   	   Rx_flage_reg;
  wire 	   sys_clk_i;
@@ -113,7 +114,7 @@ module TOP_RB(
  parameter  CNT_DA  = 8'h08;   //计数
  parameter  PAR_SD  = 8'h10;   //发校验
  parameter  WAIT_SD = 8'h20;   //wait
-
+ parameter  BACK    = 8'h40;   //wait
 
  IBUFDS #(
    .DIFF_TERM("FALSE"),       // Differential Termination
@@ -154,46 +155,49 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 		chnnal		<= 16'd0;
 		Rx_flage	<= 1'b0;
 	end else begin
-		case(rd_state) 
+		case(rd_state)
 			8'h01 : begin
 				if(m_axi_rx_tvalid && (Rx_data_temp[63:48] == 16'haa55)) begin
 					rx_parity			<= Rx_data_temp;
 					chnnal				<= Rx_data_temp[15: 0];
 					read_len			<= Rx_data_temp[47:32];
+					Rx_Cnt				<= 16'd0;
 					rd_state 			<= 8'h02;
 				end else begin
 					rd_state 			<= 8'h01;
+					read_len			<= 16'd0;
+					chnnal				<= 16'd0;
+					rx_parity			<= 64'd0;
 				end
-				Rx_Cnt					<= 16'd0;
-				Rx_flage 				<= 1'b0;
 			end
 			8'h02 : begin
-				    if(Rx_data_temp != 64'd0) begin
-						DATA_IN[Rx_Cnt]		<= Rx_data_temp;
-						Rx_Cnt				<= Rx_Cnt + 1'b1;
-						rx_parity 			<= rx_parity ^ Rx_data_temp;
-						rd_state 			<= 8'h03;
-					end else begin
-						rd_state 			<= 8'h01;
-					end
-			end
- 			8'h03 : begin
-				if(Rx_Cnt == read_len || (Rx_Cnt > 16'd200)) begin
 					rd_state 			<= 8'h04;
+			end
+			8'h04 : begin
+					DATA_IN[Rx_Cnt]		<= Rx_data_temp;
+					Rx_Cnt				<= Rx_Cnt + 1'b1;
+					rx_parity 			<= rx_parity ^ Rx_data_temp;
+					rd_state 			<= 8'h08;
+			end
+ 			8'h08 : begin
+				if(Rx_Cnt == read_len || (Rx_Cnt > 16'd100)) begin
+					rd_state 			<= 8'h10;
 				end else begin
-					rd_state 			<= 8'h02;
+					rd_state 			<= 8'h04;
 				end
 			end
-			8'h4 : begin
+			8'h10 : begin
 				if(Rx_data_temp == rx_parity) begin
-					rd_state 			<= 8'h05;
+					rd_state 			<= 8'h20;
 					Rx_flage 			<= 1'b1;
+				end else if(m_axi_rx_tvalid) begin
+					rd_state 			<= 8'h01;
 				end else begin
-					rd_state 			<= 8'h1;
+					rd_state 			<= 8'h10;
+					Rx_flage 			<= 1'b0;
 				end
-				rx_parity			<= 64'd0;
 			end
-			8'h5 : begin
+			8'h20 : begin
 				rd_state 				<= 8'h01;
 				Rx_flage 				<= 1'b0;
 				rx_parity 			    <= 64'd0;
@@ -227,14 +231,15 @@ end
 	//			end else if(chnnal == 16'h000b)begin
 					{fdataInCtrl[0],fdataInCtrl[1]} <= DATA_IN[2];
 					{fdataInCtrl[2],fdataInCtrl[3]} <= DATA_IN[3];
+					ap_start	<= 1'b1;
 					STAT 		<= 8'd3;
 				end else begin
-					STAT 		<= 8'd1;
+					STAT 		<= 8'd2;
 				end
 			end
 			8'd3 : begin
 				STAT 		<= 8'd1;
-				ap_start	<= 1'b1;
+				ap_start	<= 1'b0;
 			end
 			default : begin
 				STAT 		<= 8'd1;
@@ -344,21 +349,14 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 			end
 			PAR_SD : begin
 					s_axi_tx_tdata 	<= parity;
-				//	Tx_Cnt			<= 16'd0;
 					s_axi_tx_tlast  <= 1'b1;
 					sd_state	    <= WAIT_SD;
 			end
 			WAIT_SD: begin
-				s_axi_tx_tlast  <= 1'b0;
-				s_axi_tx_tdata	<= 64'd0;
-				Tx_Cnt          <= 16'd0;
-			//	s_axi_tx_tkeep  <= 8'h0;
-				if(wait_cnt > DELAY_SEC) begin
+					Tx_Cnt          <=  16'd0;
+					s_axi_tx_tlast  <=  1'b0;
+					s_axi_tx_tdata	<=  64'd0;
 					sd_state	    <= IDEL;
-				end else begin
-					sd_state	    <= WAIT_SD;
-					wait_cnt        <= wait_cnt  + 1'b1;
-				end
 			end
 			default: begin
 					sd_state   		<= IDEL;
@@ -366,6 +364,7 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 		endcase
 	end
 end
+
 
 //aurora ip核的例化
 aurora_64b66b_0 aurora_64b66b_rb (
@@ -427,6 +426,7 @@ ila_0 ila_RX (
 	.probe5(m_axi_rx_tvalid) // input wire [0:0]  probe5
 );
 
+
 ila_0 ila_tX (
 	.clk(user_clk_out), // input wire clk
 
@@ -439,6 +439,8 @@ ila_0 ila_tX (
 );
 
 
+
+/*
 ila_1 ila_1_rx (
 	.clk(user_clk_out), // input wire clk
 
@@ -468,5 +470,25 @@ ila_1 ila_1_tx (
 	.probe8(s_axi_tx_tdata), // input wire [63:0]  probe8 
 	.probe9(DATA_OUT[4]) // input wire [63:0]  probe9
 );
+
+*/
+
+ila_1 ila_1_rx (
+	.clk(user_clk_out), // input wire clk
+
+	.probe0(m_axi_rx_tdata), // input wire [63:0]  probe0  
+	.probe1(Rx_data_temp), // input wire [63:0]  probe1 
+	.probe2(rx_parity), // input wire [63:0]  probe2 
+	.probe3(Rx_Cnt), // input wire [15:0]  probe3 
+	.probe4(rd_state), // input wire [7:0]  probe4 
+	.probe5(Rx_flage), // input wire [0:0]  probe5 
+	.probe6(ap_start), // input wire [0:0]  probe6 
+	.probe7(DATA_IN[0]), // input wire [63:0]  probe7 
+	.probe8(DATA_IN[1]), // input wire [63:0]  probe8 
+	.probe9(DATA_IN[2]), // input wire [63:0]  probe9 
+	.probe10(DATA_IN[3]) // input wire [63:0]  probe10
+);
+
+
 
 endmodule

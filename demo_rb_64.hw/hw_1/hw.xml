@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z100_1" gui_info="dashboard1=hw_ila_1[xc7z100_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z100_1/hw_ila_1/Status=ILA_STATUS_1;xc7z100_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;],dashboard2=hw_ila_2[xc7z100_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z100_1/hw_ila_2/Status=ILA_STATUS_1;xc7z100_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;],dashboard3=hw_ila_3[xc7z100_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_3/Status=ILA_STATUS_1;xc7z100_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7z100_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;],dashboard4=hw_ila_4[xc7z100_1/hw_ila_4/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_4/Trigger Setup=ILA_TRIGGER_1;xc7z100_1/hw_ila_4/Status=ILA_STATUS_1;xc7z100_1/hw_ila_4/Capture Setup=ILA_CAPTURE_1;xc7z100_1/hw_ila_4/Settings=ILA_SETTINGS_1;]"/>
+  <device name="xc7z100_1" gui_info="dashboard1=hw_ila_1[xc7z100_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z100_1/hw_ila_1/Status=ILA_STATUS_1;xc7z100_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;],dashboard2=hw_ila_2[xc7z100_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z100_1/hw_ila_2/Status=ILA_STATUS_1;xc7z100_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;],dashboard3=hw_ila_3[xc7z100_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z100_1/hw_ila_3/Status=ILA_STATUS_1;xc7z100_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z100_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7z100_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z100_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/TOP_RB.ltx"/>
@@ -2732,6 +2732,90 @@
         <net name="&lt;const0>_99"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DATA_IN[0][63]"/>
+        <net name="DATA_IN[0][62]"/>
+        <net name="DATA_IN[0][61]"/>
+        <net name="DATA_IN[0][60]"/>
+        <net name="DATA_IN[0][59]"/>
+        <net name="DATA_IN[0][58]"/>
+        <net name="DATA_IN[0][57]"/>
+        <net name="DATA_IN[0][56]"/>
+        <net name="DATA_IN[0][55]"/>
+        <net name="DATA_IN[0][54]"/>
+        <net name="DATA_IN[0][53]"/>
+        <net name="DATA_IN[0][52]"/>
+        <net name="DATA_IN[0][51]"/>
+        <net name="DATA_IN[0][50]"/>
+        <net name="DATA_IN[0][49]"/>
+        <net name="DATA_IN[0][48]"/>
+        <net name="DATA_IN[0][47]"/>
+        <net name="DATA_IN[0][46]"/>
+        <net name="DATA_IN[0][45]"/>
+        <net name="DATA_IN[0][44]"/>
+        <net name="DATA_IN[0][43]"/>
+        <net name="DATA_IN[0][42]"/>
+        <net name="DATA_IN[0][41]"/>
+        <net name="DATA_IN[0][40]"/>
+        <net name="DATA_IN[0][39]"/>
+        <net name="DATA_IN[0][38]"/>
+        <net name="DATA_IN[0][37]"/>
+        <net name="DATA_IN[0][36]"/>
+        <net name="DATA_IN[0][35]"/>
+        <net name="DATA_IN[0][34]"/>
+        <net name="DATA_IN[0][33]"/>
+        <net name="DATA_IN[0][32]"/>
+        <net name="DATA_IN[0][31]"/>
+        <net name="DATA_IN[0][30]"/>
+        <net name="DATA_IN[0][29]"/>
+        <net name="DATA_IN[0][28]"/>
+        <net name="DATA_IN[0][27]"/>
+        <net name="DATA_IN[0][26]"/>
+        <net name="DATA_IN[0][25]"/>
+        <net name="DATA_IN[0][24]"/>
+        <net name="DATA_IN[0][23]"/>
+        <net name="DATA_IN[0][22]"/>
+        <net name="DATA_IN[0][21]"/>
+        <net name="DATA_IN[0][20]"/>
+        <net name="DATA_IN[0][19]"/>
+        <net name="DATA_IN[0][18]"/>
+        <net name="DATA_IN[0][17]"/>
+        <net name="DATA_IN[0][16]"/>
+        <net name="DATA_IN[0][15]"/>
+        <net name="DATA_IN[0][14]"/>
+        <net name="DATA_IN[0][13]"/>
+        <net name="DATA_IN[0][12]"/>
+        <net name="DATA_IN[0][11]"/>
+        <net name="DATA_IN[0][10]"/>
+        <net name="DATA_IN[0][9]"/>
+        <net name="DATA_IN[0][8]"/>
+        <net name="DATA_IN[0][7]"/>
+        <net name="DATA_IN[0][6]"/>
+        <net name="DATA_IN[0][5]"/>
+        <net name="DATA_IN[0][4]"/>
+        <net name="DATA_IN[0][3]"/>
+        <net name="DATA_IN[0][2]"/>
+        <net name="DATA_IN[0][1]"/>
+        <net name="DATA_IN[0][0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -2816,7 +2900,91 @@
         <net name="DATA_IN[0]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DATA_IN[1][63]"/>
+        <net name="DATA_IN[1][62]"/>
+        <net name="DATA_IN[1][61]"/>
+        <net name="DATA_IN[1][60]"/>
+        <net name="DATA_IN[1][59]"/>
+        <net name="DATA_IN[1][58]"/>
+        <net name="DATA_IN[1][57]"/>
+        <net name="DATA_IN[1][56]"/>
+        <net name="DATA_IN[1][55]"/>
+        <net name="DATA_IN[1][54]"/>
+        <net name="DATA_IN[1][53]"/>
+        <net name="DATA_IN[1][52]"/>
+        <net name="DATA_IN[1][51]"/>
+        <net name="DATA_IN[1][50]"/>
+        <net name="DATA_IN[1][49]"/>
+        <net name="DATA_IN[1][48]"/>
+        <net name="DATA_IN[1][47]"/>
+        <net name="DATA_IN[1][46]"/>
+        <net name="DATA_IN[1][45]"/>
+        <net name="DATA_IN[1][44]"/>
+        <net name="DATA_IN[1][43]"/>
+        <net name="DATA_IN[1][42]"/>
+        <net name="DATA_IN[1][41]"/>
+        <net name="DATA_IN[1][40]"/>
+        <net name="DATA_IN[1][39]"/>
+        <net name="DATA_IN[1][38]"/>
+        <net name="DATA_IN[1][37]"/>
+        <net name="DATA_IN[1][36]"/>
+        <net name="DATA_IN[1][35]"/>
+        <net name="DATA_IN[1][34]"/>
+        <net name="DATA_IN[1][33]"/>
+        <net name="DATA_IN[1][32]"/>
+        <net name="DATA_IN[1][31]"/>
+        <net name="DATA_IN[1][30]"/>
+        <net name="DATA_IN[1][29]"/>
+        <net name="DATA_IN[1][28]"/>
+        <net name="DATA_IN[1][27]"/>
+        <net name="DATA_IN[1][26]"/>
+        <net name="DATA_IN[1][25]"/>
+        <net name="DATA_IN[1][24]"/>
+        <net name="DATA_IN[1][23]"/>
+        <net name="DATA_IN[1][22]"/>
+        <net name="DATA_IN[1][21]"/>
+        <net name="DATA_IN[1][20]"/>
+        <net name="DATA_IN[1][19]"/>
+        <net name="DATA_IN[1][18]"/>
+        <net name="DATA_IN[1][17]"/>
+        <net name="DATA_IN[1][16]"/>
+        <net name="DATA_IN[1][15]"/>
+        <net name="DATA_IN[1][14]"/>
+        <net name="DATA_IN[1][13]"/>
+        <net name="DATA_IN[1][12]"/>
+        <net name="DATA_IN[1][11]"/>
+        <net name="DATA_IN[1][10]"/>
+        <net name="DATA_IN[1][9]"/>
+        <net name="DATA_IN[1][8]"/>
+        <net name="DATA_IN[1][7]"/>
+        <net name="DATA_IN[1][6]"/>
+        <net name="DATA_IN[1][5]"/>
+        <net name="DATA_IN[1][4]"/>
+        <net name="DATA_IN[1][3]"/>
+        <net name="DATA_IN[1][2]"/>
+        <net name="DATA_IN[1][1]"/>
+        <net name="DATA_IN[1][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -2910,6 +3078,90 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DATA_IN[2][63]"/>
+        <net name="DATA_IN[2][62]"/>
+        <net name="DATA_IN[2][61]"/>
+        <net name="DATA_IN[2][60]"/>
+        <net name="DATA_IN[2][59]"/>
+        <net name="DATA_IN[2][58]"/>
+        <net name="DATA_IN[2][57]"/>
+        <net name="DATA_IN[2][56]"/>
+        <net name="DATA_IN[2][55]"/>
+        <net name="DATA_IN[2][54]"/>
+        <net name="DATA_IN[2][53]"/>
+        <net name="DATA_IN[2][52]"/>
+        <net name="DATA_IN[2][51]"/>
+        <net name="DATA_IN[2][50]"/>
+        <net name="DATA_IN[2][49]"/>
+        <net name="DATA_IN[2][48]"/>
+        <net name="DATA_IN[2][47]"/>
+        <net name="DATA_IN[2][46]"/>
+        <net name="DATA_IN[2][45]"/>
+        <net name="DATA_IN[2][44]"/>
+        <net name="DATA_IN[2][43]"/>
+        <net name="DATA_IN[2][42]"/>
+        <net name="DATA_IN[2][41]"/>
+        <net name="DATA_IN[2][40]"/>
+        <net name="DATA_IN[2][39]"/>
+        <net name="DATA_IN[2][38]"/>
+        <net name="DATA_IN[2][37]"/>
+        <net name="DATA_IN[2][36]"/>
+        <net name="DATA_IN[2][35]"/>
+        <net name="DATA_IN[2][34]"/>
+        <net name="DATA_IN[2][33]"/>
+        <net name="DATA_IN[2][32]"/>
+        <net name="DATA_IN[2][31]"/>
+        <net name="DATA_IN[2][30]"/>
+        <net name="DATA_IN[2][29]"/>
+        <net name="DATA_IN[2][28]"/>
+        <net name="DATA_IN[2][27]"/>
+        <net name="DATA_IN[2][26]"/>
+        <net name="DATA_IN[2][25]"/>
+        <net name="DATA_IN[2][24]"/>
+        <net name="DATA_IN[2][23]"/>
+        <net name="DATA_IN[2][22]"/>
+        <net name="DATA_IN[2][21]"/>
+        <net name="DATA_IN[2][20]"/>
+        <net name="DATA_IN[2][19]"/>
+        <net name="DATA_IN[2][18]"/>
+        <net name="DATA_IN[2][17]"/>
+        <net name="DATA_IN[2][16]"/>
+        <net name="DATA_IN[2][15]"/>
+        <net name="DATA_IN[2][14]"/>
+        <net name="DATA_IN[2][13]"/>
+        <net name="DATA_IN[2][12]"/>
+        <net name="DATA_IN[2][11]"/>
+        <net name="DATA_IN[2][10]"/>
+        <net name="DATA_IN[2][9]"/>
+        <net name="DATA_IN[2][8]"/>
+        <net name="DATA_IN[2][7]"/>
+        <net name="DATA_IN[2][6]"/>
+        <net name="DATA_IN[2][5]"/>
+        <net name="DATA_IN[2][4]"/>
+        <net name="DATA_IN[2][3]"/>
+        <net name="DATA_IN[2][2]"/>
+        <net name="DATA_IN[2][1]"/>
+        <net name="DATA_IN[2][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe5[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
@@ -2982,6 +3234,90 @@
         <net name="DATA_IN[2]__0[2]"/>
         <net name="DATA_IN[2]__0[1]"/>
         <net name="DATA_IN[2]__0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[63:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DATA_IN[3][63]"/>
+        <net name="DATA_IN[3][62]"/>
+        <net name="DATA_IN[3][61]"/>
+        <net name="DATA_IN[3][60]"/>
+        <net name="DATA_IN[3][59]"/>
+        <net name="DATA_IN[3][58]"/>
+        <net name="DATA_IN[3][57]"/>
+        <net name="DATA_IN[3][56]"/>
+        <net name="DATA_IN[3][55]"/>
+        <net name="DATA_IN[3][54]"/>
+        <net name="DATA_IN[3][53]"/>
+        <net name="DATA_IN[3][52]"/>
+        <net name="DATA_IN[3][51]"/>
+        <net name="DATA_IN[3][50]"/>
+        <net name="DATA_IN[3][49]"/>
+        <net name="DATA_IN[3][48]"/>
+        <net name="DATA_IN[3][47]"/>
+        <net name="DATA_IN[3][46]"/>
+        <net name="DATA_IN[3][45]"/>
+        <net name="DATA_IN[3][44]"/>
+        <net name="DATA_IN[3][43]"/>
+        <net name="DATA_IN[3][42]"/>
+        <net name="DATA_IN[3][41]"/>
+        <net name="DATA_IN[3][40]"/>
+        <net name="DATA_IN[3][39]"/>
+        <net name="DATA_IN[3][38]"/>
+        <net name="DATA_IN[3][37]"/>
+        <net name="DATA_IN[3][36]"/>
+        <net name="DATA_IN[3][35]"/>
+        <net name="DATA_IN[3][34]"/>
+        <net name="DATA_IN[3][33]"/>
+        <net name="DATA_IN[3][32]"/>
+        <net name="DATA_IN[3][31]"/>
+        <net name="DATA_IN[3][30]"/>
+        <net name="DATA_IN[3][29]"/>
+        <net name="DATA_IN[3][28]"/>
+        <net name="DATA_IN[3][27]"/>
+        <net name="DATA_IN[3][26]"/>
+        <net name="DATA_IN[3][25]"/>
+        <net name="DATA_IN[3][24]"/>
+        <net name="DATA_IN[3][23]"/>
+        <net name="DATA_IN[3][22]"/>
+        <net name="DATA_IN[3][21]"/>
+        <net name="DATA_IN[3][20]"/>
+        <net name="DATA_IN[3][19]"/>
+        <net name="DATA_IN[3][18]"/>
+        <net name="DATA_IN[3][17]"/>
+        <net name="DATA_IN[3][16]"/>
+        <net name="DATA_IN[3][15]"/>
+        <net name="DATA_IN[3][14]"/>
+        <net name="DATA_IN[3][13]"/>
+        <net name="DATA_IN[3][12]"/>
+        <net name="DATA_IN[3][11]"/>
+        <net name="DATA_IN[3][10]"/>
+        <net name="DATA_IN[3][9]"/>
+        <net name="DATA_IN[3][8]"/>
+        <net name="DATA_IN[3][7]"/>
+        <net name="DATA_IN[3][6]"/>
+        <net name="DATA_IN[3][5]"/>
+        <net name="DATA_IN[3][4]"/>
+        <net name="DATA_IN[3][3]"/>
+        <net name="DATA_IN[3][2]"/>
+        <net name="DATA_IN[3][1]"/>
+        <net name="DATA_IN[3][0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -3068,7 +3404,7 @@
         <net name="DATA_IN[3]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -3152,7 +3488,7 @@
         <net name="DATA_IN[4]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -3236,7 +3572,7 @@
         <net name="DATA_OUT[1]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -3404,7 +3740,7 @@
         <net name="DATA_OUT[2]__0_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -3498,7 +3834,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="MAP" value="probe3[15:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3534,7 +3870,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe9[63:0]"/>
+        <Option Id="MAP" value="probe1[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -3611,25 +3947,25 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
         <net name="Rx_flage"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -3663,6 +3999,27 @@
         <net name="Tx_Cnt[2]"/>
         <net name="Tx_Cnt[1]"/>
         <net name="Tx_Cnt[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="ap_start"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -3715,7 +4072,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe0[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -3764,7 +4121,7 @@
         <net name="chnnal[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -3920,7 +4277,7 @@
         <net name="idataInCtrl[1]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -4076,7 +4433,7 @@
         <net name="idataInCtrl[3]__0[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -4128,7 +4485,7 @@
         <net name="idataOutCtrl[0][0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -4240,7 +4597,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe1[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4261,7 +4618,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe2[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4337,7 +4694,7 @@
         <net name="m_axi_rx_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -4347,7 +4704,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe8[63:0]"/>
+        <Option Id="MAP" value="probe0[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -4429,7 +4786,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe3[7:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4457,7 +4814,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4478,7 +4835,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_3"/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4491,7 +4848,7 @@
         <net name="m_axi_rx_tvalid"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -4577,6 +4934,34 @@
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="rd_state[7]"/>
+        <net name="rd_state[6]"/>
+        <net name="rd_state[5]"/>
+        <net name="rd_state[4]"/>
+        <net name="rd_state[3]"/>
+        <net name="rd_state[2]"/>
+        <net name="rd_state[1]"/>
+        <net name="rd_state[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
@@ -4621,7 +5006,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe7[63:0]"/>
+        <Option Id="MAP" value="probe2[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -4703,7 +5088,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe2[63:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4779,7 +5164,7 @@
         <net name="s_axi_tx_tdata[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -4871,7 +5256,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe3[7:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4894,18 +5279,18 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe4[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -4920,7 +5305,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe1[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4941,7 +5326,7 @@
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_ILA" value="hw_ila_4"/>
+        <Option Id="HW_ILA" value="hw_ila_3"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe5[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
@@ -4954,7 +5339,7 @@
         <net name="s_axi_tx_tvalid"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>

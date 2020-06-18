@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jun 18 10:55:46 2020
+| Date         : Thu Jun 18 16:32:35 2020
 | Host         : DESKTOP-J26TQC9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TOP_RB_utilization_synth.rpt -pb TOP_RB_utilization_synth.pb
 | Design       : TOP_RB
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4685 |     0 |    277400 |  1.69 |
-|   LUT as Logic             | 4458 |     0 |    277400 |  1.61 |
+| Slice LUTs*                | 4395 |     0 |    277400 |  1.58 |
+|   LUT as Logic             | 4168 |     0 |    277400 |  1.50 |
 |   LUT as Memory            |  227 |     0 |    108200 |  0.21 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |  227 |     0 |           |       |
-| Slice Registers            | 3697 |     0 |    554800 |  0.67 |
-|   Register as Flip Flop    | 3377 |     0 |    554800 |  0.61 |
-|   Register as Latch        |  320 |     0 |    554800 |  0.06 |
+| Slice Registers            | 3455 |     0 |    554800 |  0.62 |
+|   Register as Flip Flop    | 3199 |     0 |    554800 |  0.58 |
+|   Register as Latch        |  256 |     0 |    554800 |  0.05 |
 | F7 Muxes                   |    0 |     0 |    138700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     69350 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 324   |          Yes |           - |          Set |
-| 1000  |          Yes |           - |        Reset |
-| 51    |          Yes |         Set |            - |
-| 2322  |          Yes |       Reset |            - |
+| 262   |          Yes |           - |          Set |
+| 844   |          Yes |           - |        Reset |
+| 61    |          Yes |         Set |            - |
+| 2288  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -155,19 +155,19 @@ Table of Contents
 +---------------+------+---------------------+
 |    Ref Name   | Used | Functional Category |
 +---------------+------+---------------------+
-| FDRE          | 2322 |        Flop & Latch |
+| FDRE          | 2288 |        Flop & Latch |
 | LUT1          | 2046 |                 LUT |
-| LUT2          |  775 |                 LUT |
-| FDCE          |  680 |        Flop & Latch |
-| LUT3          |  660 |                 LUT |
-| LUT5          |  504 |                 LUT |
-| LUT6          |  412 |                 LUT |
-| FDPE          |  324 |        Flop & Latch |
-| LDCE          |  320 |        Flop & Latch |
-| LUT4          |  256 |                 LUT |
+| LUT2          |  702 |                 LUT |
+| FDCE          |  588 |        Flop & Latch |
+| LUT3          |  477 |                 LUT |
+| LUT4          |  458 |                 LUT |
+| LUT6          |  397 |                 LUT |
+| FDPE          |  262 |        Flop & Latch |
+| LUT5          |  259 |                 LUT |
+| LDCE          |  256 |        Flop & Latch |
 | SRLC32E       |  185 |  Distributed Memory |
-| CARRY4        |   73 |          CarryLogic |
-| FDSE          |   51 |        Flop & Latch |
+| FDSE          |   61 |        Flop & Latch |
+| CARRY4        |   59 |          CarryLogic |
 | SRL16E        |   42 |  Distributed Memory |
 | IBUF          |    5 |                  IO |
 | BUFG          |    5 |               Clock |
@@ -188,8 +188,8 @@ Table of Contents
 +----------+------+
 | Ref Name | Used |
 +----------+------+
-| ila_1    |    2 |
 | ila_0    |    2 |
+| ila_1    |    1 |
 +----------+------+
 
 
