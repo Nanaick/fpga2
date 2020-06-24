@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z100ffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,17 +30,16 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/new/TOP_RB.v
+read_verilog -library xil_defaultlib {
+  G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/new/rx_cdc_read.v
+  G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/new/rx_frame_gen.v
+  G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/new/send_data.v
+  G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/new/TOP_RB.v
+}
 read_ip -quiet G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xci
 set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc]
 set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc]
-
-read_ip -quiet G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_0/ila_0.xci
-set_property used_in_synthesis false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 read_ip -quiet G:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_1/ila_1.xci
 set_property used_in_synthesis false [get_files -all g:/QH_WORK/Demo/vivado_prj/demo_rb_64/demo_rb_64/demo_rb_64.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc]

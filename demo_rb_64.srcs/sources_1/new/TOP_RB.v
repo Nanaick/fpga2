@@ -388,7 +388,7 @@ aurora_64b66b_0 aurora_64b66b_rb (
   .s_axi_tx_tlast(s_axi_tx_tlast),                    // input wire s_axi_tx_tlast
   .s_axi_tx_tvalid(s_axi_tx_tvalid),                  // input wire s_axi_tx_tvalid
   .s_axi_tx_tready(s_axi_tx_tready),                  // output wire s_axi_tx_tready
- 
+
   .m_axi_rx_tdata(m_axi_rx_tdata),                    // output wire [63 : 0] m_axi_rx_tdata
   .m_axi_rx_tkeep(m_axi_rx_tkeep),                    // output wire [7 : 0] m_axi_rx_tkeep
   .m_axi_rx_tlast(m_axi_rx_tlast),                    // output wire m_axi_rx_tlast
@@ -415,6 +415,24 @@ aurora_64b66b_0 aurora_64b66b_rb (
 );
 
 
+send_data send_data_uart(
+	  .sys_clk	   ( sys_clk_i	 ),
+	  .rset		   ( sys_rst  	 ),
+
+	  .CLK_UART1   ( CLK_UART1   ),
+	  .UART_Data1  ( UART_Data1  ),
+	  .UART_Valid1 ( UART_Valid1 ),
+
+	  .AXIS_Data   ( AXIS_Data   ),
+	  .AXIS_Keep   ( AXIS_Keep   ),
+	  .AXIS_Last   ( AXIS_Last   ),
+	  .AXIS_Valid  ( AXIS_Valid  ),
+
+	  .AXIS_Ready  ( AXIS_Ready  )
+    );
+
+
+/*
 ila_0 ila_RX (
 	.clk(user_clk_out), // input wire clk
 
@@ -438,7 +456,7 @@ ila_0 ila_tX (
 	.probe5(s_axi_tx_tvalid) // input wire [0:0]  probe5
 );
 
-
+*/
 
 /*
 ila_1 ila_1_rx (
